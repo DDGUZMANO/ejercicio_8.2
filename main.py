@@ -11,9 +11,9 @@ class Vehiculo():
 moto = Vehiculo('Negro','Hornet','Honda')
 print(moto.impr())
 
-f = open('fichero_vehiculos.bin','wb')
-pickle.dump(moto,f)
+f = open('fichero_vehiculos.bin','rb')
+moto = pickle.load(f)
 f.close()
-
+print(type(moto))
     
     
